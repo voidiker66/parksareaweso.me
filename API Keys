@@ -1,2 +1,3 @@
 API Keys
 National Park Service: TRoG4jXCN3fa1p8fdfT8dYhpcTJQjBzn3h9SWUtC
+curl -H 'X-Api-Key: TRoG4jXCN3fa1p8fdfT8dYhpcTJQjBzn3h9SWUtC' 'https://developer.nps.gov/api/v1/parks?parkCode=yell'

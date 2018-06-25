@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <script type="text/javascript" src="../../json_data/acadia.json"></script>
+  <script type="text/javascript" src="../../json_data/padreisland.json"></script>
 </head>
 <body>
 
@@ -34,7 +34,7 @@
 </div>
 
 <script type="text/javascript">
-  var park = JSON.parse(acadia);
+  var park = JSON.parse(padreisland);
 
   document.getElementById("park_name").innerHTML = park.data[0].fullName + ", " + park.data[0].states;
   document.getElementById("park_description").innerHTML = park.data[0].description;

@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="../../json_data/maple.json"></script>
 </head>
 <body>
 
@@ -16,29 +18,28 @@
       <a class="navbar-brand" href="#">Parks Are Awesome</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="./main.html">Home</a></li>
-      <li class="active"><a href="./parks.html">Parks</a></li>
-      <li><a href="./volunteerops.html">Volunteer Ops</a></li>
-      <li><a href="./wildlife.html">Wildlife</a></li>
-      <li><a href="./aboutus.html">About Us</a></li>
+      <li><a href="../main.html">Home</a></li>
+      <li><a href="../parks.html">Parks</a></li>
+      <li><a href="../volunteerops.html">Volunteer Ops</a></li>
+      <li class="active"><a href="../wildlife.html">Wildlife</a></li>
+      <li><a href="../aboutus.html">About Us</a></li>
     </ul>
   </div>
 </nav>
   
 <div class="container">
-  <h3>Acadia National Park</h3>
-  <a href="./parks/acadia.html">Link to Description</a>
+  <h3 id="name"></h3>
+  <p id="summary"></p>
+  <img src="" id="image" style="height: 400px; width: 300px;"></img>
 </div>
 
-<div class="container">
-  <h3>Yellowstone National Park</h3>
-  <a href="./parks/yellowstone.html">Link to Description</a>
-</div>
+<script type="text/javascript">
+  var park = JSON.parse(maple);
 
-<div class="container">
-  <h3>Padre Island National Seashore</h3>
-  <a href="./parks/padreisland.html">Link to Description</a>
-</div>
+  document.getElementById("name").innerHTML = park.title;
+  document.getElementById("summary").innerHTML = park.summary;
+  document.getElementById("image").src = park.image;
+</script>
 
 </body>
 </html>
